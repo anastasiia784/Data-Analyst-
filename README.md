@@ -61,3 +61,81 @@ Business insights summary highlighting top product categories, key markets, prof
 Interactive charts and heatmaps for clear representation of sales performance and trends
 
 This project demonstrates end-to-end Data Analytics skills, including data cleaning, transformation, analysis, visualization, and reporting, suitable for showcasing in a portfolio or resume.
+
+# **Portfolio Project 1.ipynb**
+## E-Commerce Sales Analysis
+### **Project Overview**
+
+This project provides a comprehensive analysis of an e-commerce dataset to uncover insights into sales performance, user behavior, product trends, and traffic sources. Using SQL, Python, and Tableau, the analysis covers both descriptive and statistical approaches to support business decision-making.
+
+Key Goals:
+1.Extract and clean data from Google BigQuery.
+2.Explore sales trends, top-selling products, and high-performing regions.
+3.Analyze user behavior (registered vs unregistered users).
+4.Examine traffic sources, device types, and session dynamics.
+5.Conduct statistical tests to validate hypotheses.
+6.Visualize insights with interactive dashboards.
+
+###**Data Sources**
+
+The dataset is stored in Google BigQuery and contains the following tables:
+
+Table Name	Description
+session	User sessions, including session IDs and dates.
+order	Orders placed during each session.
+product	Product catalog with categories, names, prices, and descriptions.
+session_params	Additional session metadata: device, browser, country, traffic source, etc.
+account	Registered users’ information: email verification, subscription status.
+account_session	Links sessions to registered accounts.
+
+Other supporting tables include email_sent, email_open, email_visit, event_params, paid_search_cost, ab_test, and revenue_predict.
+
+### **Technologies**
+**Python** (Pandas, NumPy, Matplotlib, Seaborn, SciPy, Statsmodels)
+**SQL** (Google BigQuery)
+**Tableau** (for dashboards and interactive visualizations)
+**Google Colab** (for running Python notebooks)
+
+### **Project Structure**
+**Data Extraction & Cleaning**
+Load data from BigQuery.
+Merge tables to create a unified dataset.
+Handle missing values and correct data types.
+**Exploratory Data Analysis (EDA)**
+Overview of sales trends over time.
+Top regions, countries, and continents by sales and orders.
+Top products and categories.
+Traffic source and device distribution.
+**Sales Dynamics & User Behavior**
+Comparison of registered vs unregistered users.
+Average order value (AOV) by device type.
+Organic traffic share by region.
+**Statistical Analysis**
+Correlations between sessions and sales.
+Correlations between top product categories and traffic channels.
+Group comparisons (registered vs unregistered, desktop vs mobile).
+Tests used: Mann–Whitney U, Welch’s t-test, KS test, ANOVA, Chi-square test.
+**Visualizations**
+Line charts, bar charts, and heatmaps for sales, traffic, and product performance.
+Comparative distributions and correlation matrices.
+**Dashboards**
+Interactive Tableau dashboards showing sales trends, top categories, and regional insights.
+
+
+### **Key Insights**
+**Top Regions**: Americas, Europe, and Asia drive the majority of sales.
+**User Segmentation**: Registered users contribute significantly higher sales; ~72% verified emails.
+**Product Performance**: Certain product categories show synchronized demand, enabling cross-selling opportunities.
+**Traffic Sources**: Organic and direct channels are the largest contributors to sessions and sales.
+**Device Analysis:** No significant difference in AOV between desktop and mobile users.
+**Temporal Patterns**: Daily sales strongly correlate with session volumes (r ≈ 0.96).
+### **Business Recommendations:**
+Focus marketing on high-performing channels and regions.
+Encourage user registration to boost verified customer base.
+Explore cross-selling based on correlated product categories.
+Optimize mobile and desktop experience for engagement.
+How to Run the Project
+Open the Jupyter notebook in Google Colab.
+Connect to Google BigQuery with your credentials.
+Run cells sequentially to extract data, perform analysis, and generate visualizations.
+Export results or dashboards to Tableau Public for interactive exploration.
