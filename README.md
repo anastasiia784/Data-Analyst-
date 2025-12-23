@@ -139,3 +139,47 @@ Open the Jupyter notebook in Google Colab.
 Connect to Google BigQuery with your credentials.
 Run cells sequentially to extract data, perform analysis, and generate visualizations.
 Export results or dashboards to Tableau Public for interactive exploration.
+
+
+# Portfolio Project 2
+## A/B Testing Statistical Significance Tool
+### Project Overview
+
+This project implements an end-to-end A/B testing analysis pipeline using Python and Tableau.
+The main goal is to calculate statistical significance for multiple funnel metrics without relying on online calculators and to prepare a clean, visualization-ready dataset for dashboarding.
+
+The solution is scalable, metric-agnostic, and designed to support multiple tests and segmentation dimensions (test ID, country, device, channel, etc.).
+### Metrics Analyzed
+1. add_payment_info / session
+2. add_shipping_info / session
+3. begin_checkout / session
+4. new account / session
+
+### Statistical Methodology
+Test Used
+Two-proportion z-test
+
+Library
+statsmodels.stats.proportion.proportions_ztest
+Z-Statistic Convention
+
+Statistical Significance Criteria
+Significance level: α = 0.05
+Two-sided test
+Result is considered statistically significant if:
+p_value < 0.05
+### Tableau Dashboard
+
+The final table is used to build a Tableau dashboard that:
+
+Compares control vs test performance
+Highlights statistically significant results
+Applies conditional formatting based on p-value
+Displays metric uplift and direction
+Formatting Logic
+
+p_value < 0.05 → black text
+p_value ≥ 0.05 → red text
+
+# Author
+# Anastasiia Yakhiaieva
